@@ -70,15 +70,23 @@
                                     <div class="media">
                                         <div class="avatar"><img class="align-self-start mr-3" src="{{ url('admin_assets/images/avatars/avatar-17.png') }}"" alt=" user avatar"></div>
                                         <div class="media-body">
-                                            <h6 class="mt-2 user-title">Katrina Mccoy</h6>
-                                            <p class="user-subtitle">katrina92@example.com</p>
+                                            <h6 class="mt-2 user-title">Admin</h6>
+                                            <p class="user-subtitle">admin@gmail.com</p>
                                         </div>
                                     </div>
                                 </a>
                             </li>
-                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <!-- <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li> -->
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+                            <li class="dropdown-item"><i class="icon-power mr-2"></i>
+                                <!-- <a href="{{ url('/logout') }}"> -->
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+                            </li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         </ul>
                     </li>
                 </ul>

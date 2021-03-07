@@ -2,8 +2,16 @@
   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
       <div class="brand-logo">
           <a href="{{ route('dashboard') }}">
-              <img src="{{ url('admin_assets/images/logo-icon.png') }}"" class=" logo-icon" alt="logo icon">
-              <h5 class="logo-text"> Admin</h5>
+              <img style="width: 170px;" src="
+              <?php
+                $settingData = \App\Models\Setting::first();
+                if ($settingData["logo"] != "") {
+                    echo url('/uploads/logo') . '/' . $menuData["settingData"]["logo"];
+                } else {
+                    echo url('/uploads/logo') . '/default.png';
+                }
+                ?>" class=" logo-icon" alt="logo icon">
+
           </a>
       </div>
 
@@ -14,6 +22,7 @@
           <li><a href="{{ route('destination.index') }}" class="waves-effect"><i class="icon-drop text-info"></i><span>Destination</span></a></li>
           <li><a href="{{ route('packages.index') }}" class="waves-effect"><i class="icon-drop text-info"></i><span>Packages</span></a></li>
           <li><a href="{{ route('slider.index') }}" class="waves-effect"><i class="icon-drop text-info"></i><span>Slider</span></a></li>
+          <li><a href="{{ route('setting') }}" class="waves-effect"><i class="icon-drop text-info"></i><span>Setting</span></a></li>
       </ul>
 
   </div>

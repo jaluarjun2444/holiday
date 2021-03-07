@@ -141,7 +141,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="projectinput2">Main Image </label>
                                                 <br>
@@ -150,6 +150,30 @@
                                                 @if ($errors->has('image'))
                                                 <br>
                                                 <label class="error">{{ $errors->first('image') }}</label>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="projectinput1">Popular Package ? </label>
+                                                <select class="form-control" id="is_popular" name="is_popular">
+                                                    <option value="no">No</option>
+                                                    <option value="yes">Yes</option>
+                                                </select>
+                                                @if ($errors->has('is_popular'))
+                                                <label class="error">{{ $errors->first('is_popular') }}</label>
+                                                @endif
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="projectinput1">Popular Sequence</label>
+                                                <input placeholder="1 , 2 , 3 etc.." type="text" name="popular_sequence" id="popular_sequence" class="form-control" />
+                                                @if ($errors->has('popular_sequence'))
+                                                <label class="error">{{ $errors->first('popular_sequence') }}</label>
                                                 @endif
                                             </div>
                                         </div>
@@ -265,7 +289,10 @@
 @endsection
 @section('javascript_code')
 <script>
+    CKEDITOR.config.autoParagraph = false;
+    
     CKEDITOR.replace('description_detail');
+    CKEDITOR.config.autoParagraph = false;
 </script>
 
 <script>

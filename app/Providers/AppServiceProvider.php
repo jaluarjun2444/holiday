@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Http\Controllers\Helper;
+use App\Models\Setting;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,13 +25,20 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        $this->app->bind('path.public', function () {
+            return base_path('');
+        });
+
         $destinationData = Helper::getDestination();
         $regionData = Helper::getRegion();
+        $settingData = Setting::first();
         $menuData = [
             'destinationData' => $destinationData,
-            'regionData' => $regionData
+            'regionData' => $regionData,
+            'settingData' => $settingData,
         ];
-        
+
         view()->share('menuData', $menuData);
     }
 }

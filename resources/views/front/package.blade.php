@@ -71,9 +71,7 @@
                             <li><a href="#2a" data-toggle="tab">Inclusion</a></li>
                             <li><a href="#3a" data-toggle="tab">Exclusion</a></li>
                             <li><a href="#4a" data-toggle="tab">Itinerary</a></li>
-                            <li><a href="#5a" data-toggle="tab">Reviews(3)</a></li>
                         </ul>
-
                         <div class="tab-content clearfix">
                             <div class="tab-pane active" id="1a">
                                 <div class="detail-overview detail-box">
@@ -124,43 +122,7 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="5a">
-                                <div class="detail-review">
-                                    <h4>Reviews(3)</h4>
-                                    <div class="review-outer">
-                                        <ul>
-                                            <li>
-                                                <div class="review-item">
-                                                    <div class="review-image">
-                                                        <img src="images/review1.jpg" alt="image">
-                                                    </div>
-                                                    <div class="review-content">
-                                                        <h5>Micheal Clordy</h5>
-                                                        <a href="#"><i class="fa fa-reply" aria-hidden="true"></i> Reply</a>
-                                                        <p class="date">November 10,2018 at 3:10 pm</p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id iaculis arcu. Aenean non dolor magna. In sed consectetur nisi. Sed venenatis, nibh sit amet sodales ullamcorper, ipsum orci condimentum tortor, et cursus veli.tturpis at justo. Vivamus pellentesque volutpat urna vel eleifend. </p>
-                                                    </div>
-                                                </div>
-                                                <ul>
-                                                    <li>
-                                                        <div class="review-item">
-                                                            <div class="review-image">
-                                                                <img src="images/review2.jpg" alt="image">
-                                                            </div>
-                                                            <div class="review-content">
-                                                                <h5>Micheal Clordy</h5>
-                                                                <a href="#"><i class="fa fa-reply" aria-hidden="true"></i> Reply</a>
-                                                                <p class="date">November 10,2018 at 3:10 pm</p>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id iaculis arcu. Aenean non dolor magna. In sed consectetur nisi. Sed venenatis, nibh sit amet sodales ullamcorper, ipsum orci condimentum tortor, et cursus veli.tturpis at justo. Vivamus pellentesque volutpat urna vel eleifend. </p>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -179,27 +141,41 @@
                             <div class="form-content">
                                 <div class="form-content-inner">
                                     <div class="table-item">
-                                        <label>Check In</label>
+                                        <label>Name</label>
                                         <div class="form-group">
                                             <div class="date-range-inner-wrapper">
-                                                <input id="date-range2" class="form-control" value="Check In">
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                </span>
+                                                <input id="name" class="form-control" value="Name">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="table-item">
-                                        <label>Check Out</label>
+                                        <label>Mobile</label>
                                         <div class="form-group">
                                             <div class="date-range-inner-wrapper">
-                                                <input id="date-range3" class="form-control" value="Check Out">
+                                                <input id="name" class="form-control" value="Mobile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-item">
+                                        <label>Email</label>
+                                        <div class="form-group">
+                                            <div class="date-range-inner-wrapper">
+                                                <input id="name" class="form-control" value="Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-item">
+                                        <label>Date</label>
+                                        <div class="form-group">
+                                            <div class="date-range-inner-wrapper">
+                                                <input id="date-range2" class="form-control" value="Date">
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="table-item">
                                         <label>Guests</label>
                                         <div class="form-group form-icon">
@@ -236,7 +212,7 @@
                     <div class="sidebar-support">
                         <h3>Help and Support</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arnare</p>
-                        <p><i class="fa fa-phone"></i> 977 - 222 - 444 - 666</p>
+                        <p><i class="fa fa-phone"></i> <?php echo $setting['mobile'] ?? '' ?></p>
                     </div>
                 </div>
             </div>

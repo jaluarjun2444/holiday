@@ -7,11 +7,12 @@ Home
 @endsection
 @section('content')
 
+@if(isset($dest['cover_image']))
 <!-- breadcrumb starts -->
 <section style="background: url({{ url('/uploads/destination').'/'.$dest['cover_image'] }}) no-repeat;" class="breadcrumb-outer">
     <div class="container">
         <div class="breadcrumb-content">
-            <h2>{{ $dest['name'] }}</h2>
+            <h2>{{ $dest['name'] ?? 'Packages' }}</h2>
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
@@ -23,6 +24,7 @@ Home
     </div>
 </section>
 <!-- breadcrumb Ends -->
+@endif
 
 <!-- room list starts -->
 <section class="room-list">

@@ -84,11 +84,11 @@ class PackagesController extends Controller
         // dd($request->all());
 
         $name = "default.jpg";
-        // if ($request->hasfile('image')) {
-        //     $file = $request->file('image');
-        //     $name = rand(1111111111, 9999999999) . '_package_' . $file->getClientOriginalName();
-        //     $file->move('uploads/packages/', $name);
-        // }
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $name = rand(1111111111, 9999999999) . '_package_' . $file->getClientOriginalName();
+            $file->move('uploads/packages/', $name);
+        }
 
 
         $package = Packages::create([
@@ -98,6 +98,8 @@ class PackagesController extends Controller
             'description' => $request->description_detail,
             'main_image' => $name,
             'meta_key' => $request->meta_key ?? '',
+            'is_popular' => $request->is_popular ?? 'no',
+            'popular_sequence' => $request->popular_sequence ?? '1',
             'meta_desc' => $request->meta_desc ?? '',
             'price' => $request->price ?? '',
             'duration_day' => $request->duration_day ?? '',

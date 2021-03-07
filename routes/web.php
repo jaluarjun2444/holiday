@@ -22,6 +22,8 @@ Route::get('/destination/{id}/{slug}', 'FrontController@destinationSingle')->nam
 Route::get('/region/{id}/{slug}', 'FrontController@regionSingle')->name('front.regionSingle');
 Route::get('/packages', 'FrontController@packages')->name('front.packages');
 Route::get('/packages/{id}/{slug}', 'FrontController@packagesSingle')->name('front.packagesSingle');
+Route::get('/about_us', 'FrontController@about_us')->name('front.about_us');
+Route::get('/contact_us', 'FrontController@contact_us')->name('front.contact_us');
 
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
@@ -30,6 +32,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     Route::get('/', 'HomeController@index')->name('dashboard');
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
+    Route::get('/setting', 'SettingController@index')->name('setting');
+    Route::post('/saveSetting', 'SettingController@store')->name('setting.store');
 
     Route::resource('region', 'RegionController');
     Route::resource('destination', 'DestinationController');

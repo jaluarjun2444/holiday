@@ -32,54 +32,45 @@ Home
     <div class="banner-form form-style-2">
         <div class="form-content">
             <div class="form-title">
-                <h4 class="mar-0">Reserve Your Room</h4>
+                <h4 class="mar-0">Reserve Your Package</h4>
             </div>
             <div class="form-content-inner">
                 <div class="table-item">
                     <div class="form-group">
                         <div class="date-range-inner-wrapper">
-                            <input id="date-range2" class="form-control" value="Check In">
-                            <span class="input-group-addon">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                            </span>
+                            <input id="da" class="form-control" value="Name">
                         </div>
                     </div>
                 </div>
                 <div class="table-item">
-                    <label>Check Out</label>
                     <div class="form-group">
                         <div class="date-range-inner-wrapper">
-                            <input id="date-range3" class="form-control" value="Check Out">
-                            <span class="input-group-addon">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                            </span>
+                            <input id="da" class="form-control" value="Email">
                         </div>
                     </div>
                 </div>
                 <div class="table-item">
-                    <label>Guests</label>
-                    <div class="form-group form-icon">
-                        <select>
-                            <option value="1">0</option>
-                            <option value="2">1</option>
-                            <option value="3">2</option>
-                            <option value="4">3</option>
-                            <option value="5">4</option>
-                        </select>
+                    <div class="form-group">
+                        <div class="date-range-inner-wrapper">
+                            <input id="da" class="form-control" value="Mobile">
+                        </div>
                     </div>
                 </div>
                 <div class="table-item">
-                    <label>Nights</label>
-                    <div class="form-group form-icon">
-                        <select>
-                            <option value="1">0</option>
-                            <option value="2">1</option>
-                            <option value="3">2</option>
-                            <option value="4">3</option>
-                            <option value="5">4</option>
-                        </select>
+                    <div class="form-group">
+                        <div class="date-range-inner-wrapper">
+                            <input id="da" class="form-control" value="Destination">
+                        </div>
                     </div>
                 </div>
+                <div class="table-item">
+                    <div class="form-group">
+                        <div class="date-range-inner-wrapper">
+                            <textarea style="background: #f1f1f1;" class="form-control" placeholder="Enter Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="table-item">
                     <div class="form-btn">
                         <a class="btn btn-orange">Book Now</a>
@@ -91,376 +82,196 @@ Home
 </section>
 <!-- banner Ends -->
 
-<!-- about us starts -->
-<section class="about-style-1">
+<section class="about">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="about-heading">
-                    <h2 class="title">Comfort are perfectly combined here</h2>
-                    <div class="description">
-                        <p>This charming private 19th century mansion, which originally belonged to the family, has been completely renovated with care &amp; passion while respecting the spirit of place.</p>
-                        <p>Hotux Hotel surrounded herself by a team of French artisans to create a sophisticated place in a refined.</p>
-                    </div>
-                    <div class="head-button">
-                        <a href="about-us.html" class="btn btn-orange">More Info</a>
+            <div class="col-md-8">
+                <div class="about-para mar-top-50">
+                    <h3>About Us</h3>
+                    <h4>Pick a room that best suits your taste and budget</h4>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam. </p>
+                    <h5 class="text-capitalize">eque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incid dolor sit amet, consectetur, adipisci velit</h5>
+                    <div class="about-para-list mar-top-20">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="about-icon"><i class="fa fa-chess-queen"></i> Awesome Nature</div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="about-icon"><i class="fa fa-chess-queen"></i> Awaded Best Hotel</div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="about-icon"><i class="fa fa-chess-queen"></i> Online Booking</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="about-img-box row">
-                    <div class="col-sm-6  col-sm-6 col-xs-6">
-                        <a href="#"><img src="{{ url('assets/images/aboutus1.jpg')}}" alt=""></a>
-                    </div>
-                    <div class="col-sm-6 col-sm-6 col-xs-6">
-                        <a href="#"><img src="{{ url('assets/images/aboutus2.jpg')}}" alt=""></a>
-                    </div>
+            <div class="col-md-4">
+                <div class="about-us-image mar-top-50">
+                    <img src="<?php echo  url('/') . '/assets/images/gallery/gallery1.jpg' ?>" alt="image">
                 </div>
             </div>
+
         </div>
     </div>
 </section>
-<!-- about us Ends -->
 
-<!-- Rooms starts -->
-<section class="rooms rooms-style1">
+<!-- room list starts -->
+
+<!-- popular start -->
+<section class="room-list">
     <div class="container">
         <div class="section-title">
-            <h2>Explore <span>Rooms</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+            <h2>Popular <span>Packages</span></h2>
         </div>
-        <div class="room-outer">
+        <div class="list-content">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
+                @foreach($popularData as $item)
+                <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="room-item">
                         <div class="room-image">
-                            <img src="{{ url('assets/images/room-b1.jpg')}}" alt="image">
+                            <img style="max-height: 200px;" src="{{url('/uploads/packages').'/'.$item['main_image']}}" alt="{{ $item['name'] }}">
                         </div>
                         <div class="room-content">
                             <div class="room-title">
-                                <h4>Super Deluxe</h4>
-                                <p>$1200/Night</p>
+                                <p><i class="fa fa-inr"></i> Rs.{{ $item['price'] }}</p>
                                 <div class="deal-rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
+                                    <?php
+                                    for ($i = 1; $i <= $item['star_rating']; $i++) {
+                                    ?>
+                                        <span class="fa fa-star checked"></span>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                                <h5 style="min-height: 60px;max-height: 60px;">
+                                    <a href="{{ url('packages') }}/{{ $item['id'] }}/{{ Str::slug($item['name'],'_') }}">
+                                        {{ substr($item['name'], 0, 50)}}
+                                    </a>
+                                </h5>
+                            </div>
+                            <div class="room-services mar-bottom-15">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <i class="fa fa-clock" aria-hidden="true"></i> {{ $item['duration_day'] }} - {{ $item['duration_night'] }}
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $item->Destination['name'] }}
+                                    </div>
                                 </div>
                             </div>
-                            <div class="room-btns mar-top-20">
-                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                <a href="#" class="btn btn-orange">BOOK NOW</a>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p> -->
+                            <div class="room-btns">
+                                <!-- <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a> -->
+                                <center> <a href="{{ url('packages') }}/{{ $item['id'] }}/{{ Str::slug($item['name'],'_') }}" class="btn btn-orange">VIEW DETAILS</a></center>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
-                    <div class="room-item">
-                        <div class="room-image">
-                            <img src="{{ url('assets/images/room-b2.jpg')}}" alt="image">
-                        </div>
-                        <div class="room-content">
-                            <div class="room-title">
-                                <h4>Junior Suite</h4>
-                                <p>$1200/Night</p>
-                                <div class="deal-rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </div>
-                            <div class="room-btns mar-top-20">
-                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                <a href="#" class="btn btn-orange">BOOK NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
-                    <div class="room-item">
-                        <div class="room-image">
-                            <img src="{{ url('assets/images/room-b3.jpg')}}" alt="image">
-                        </div>
-                        <div class="room-content">
-                            <div class="room-title">
-                                <h4>Executive Suite</h4>
-                                <p>$1200/Night</p>
-                                <div class="deal-rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </div>
-                            <div class="room-btns mar-top-20">
-                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                <a href="#" class="btn btn-orange">BOOK NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="room-item">
-                        <div class="room-image">
-                            <img src="{{ url('assets/images/room-b4.jpg')}}" alt="image">
-                        </div>
-                        <div class="room-content">
-                            <div class="room-title">
-                                <h4>Royal Deluxe</h4>
-                                <p>$1500/Night</p>
-                                <div class="deal-rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </div>
-                            <div class="room-btns mar-top-20">
-                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                <a href="#" class="btn btn-orange">BOOK NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="room-item">
-                        <div class="room-image">
-                            <img src="{{ url('assets/images/room-b5.jpg')}}" alt="image">
-                        </div>
-                        <div class="room-content">
-                            <div class="room-title">
-                                <h4>Standard Room</h4>
-                                <p>$900/Night</p>
-                                <div class="deal-rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </div>
-                            <div class="room-btns mar-top-20">
-                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                <a href="#" class="btn btn-orange">BOOK NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="room-item">
-                        <div class="room-image">
-                            <img src="{{ url('assets/images/room-b6.jpg')}}" alt="image">
-                        </div>
-                        <div class="room-content">
-                            <div class="room-title">
-                                <h4>Special Suite</h4>
-                                <p>$1000/Night</p>
-                                <div class="deal-rating">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </div>
-                            <div class="room-btns mar-top-20">
-                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                <a href="#" class="btn btn-orange">BOOK NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-    </div>
-</section>
-<!-- Room Ends -->
 
-<!-- Call To Action Starts -->
-<section class="call-to-action call-style-1">
-    <div class="container">
-        <div class="call-content text-center">
-            <h2 class="white mar-bottom-25">Get up to <span>20% off</span> on your next travel</h2>
-            <p>Choose the package you would like to offer to your clients andsend us an inquiry using the contact form.</p>
-            <a href="#" class="btn btn-orange mar-top-20">Get It Now <i class="fas fa-angle-double-right"></i></a>
-        </div>
     </div>
 </section>
-<!-- Call To Action Ends -->
+<!-- room list Ends -->
+
 
 <!-- Services Starts -->
 <section class="services service-style-1">
     <div class="container">
         <div class="section-title">
-            <h2>Explore <span>Services</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+            <h2>Explore <span>Destination</span></h2>
         </div>
         <div class="service-outer">
             <div class="row">
+                @if($destinationData->count() > 0)
+                @foreach($destinationData as $dest)
+
+
                 <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
                     <div class="service-item">
                         <div class="service-image">
-                            <img src="{{ url('assets/images/feature1.jpg')}}" alt="Image">
+                            <img style="max-height: 300px; min-height: 300px;" src="<?php echo url('/uploads/destination') . '/' . $dest["image"]; ?>" alt="Image">
                         </div>
                         <div class="service-content">
-                            <h4><a href="service-detail.html">Gym & Exercises</a></h4>
+                            <h4><a href="{{ url('destination').'/'.$dest['id'].'/'.Str::slug($dest['name'],'_') }}">{{$dest['name']}}</a></h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
-                    <div class="service-item">
-                        <div class="service-image">
-                            <img src="{{ url('assets/images/feature2.jpg')}}" alt="Image">
-                        </div>
-                        <div class="service-content">
-                            <h4><a href="service-detail.html">Beach Sight</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
-                    <div class="service-item">
-                        <div class="service-image">
-                            <img src="{{ url('assets/images/feature5.jpg')}}" alt="Image">
-                        </div>
-                        <div class="service-content">
-                            <h4><a href="service-detail.html">Massage</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="service-item">
-                        <div class="service-image">
-                            <img src="{{ url('assets/images/feature6.jpg')}}" alt="Image">
-                        </div>
-                        <div class="service-content">
-                            <h4><a href="service-detail.html">Swimming Pool</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="service-item">
-                        <div class="service-image">
-                            <img src="{{ url('assets/images/feature7.jpg')}}" alt="Image">
-                        </div>
-                        <div class="service-content">
-                            <h4><a href="service-detail.html">Restaurant</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="service-item">
-                        <div class="service-image">
-                            <img src="{{ url('assets/images/feature8.jpg')}}" alt="Image">
-                        </div>
-                        <div class="service-content">
-                            <h4><a href="service-detail.html">Futurethon</a></h4>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                @endif
             </div>
         </div>
     </div>
 </section>
 <!-- Services Ends -->
 
-<!-- Gallery starts -->
-<section class="content gallery">
-    <div class="section-title">
-        <h2>Beautiful View of <span>Hotux</span></h2>
-        <p class="mar-bottom-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
-    </div>
+<section class="room-list">
     <div class="container">
-        <div class="gal-3-col">
-            <div class="masonry">
-                <div class="brick">
-                    <div class="gallery-item">
-                        <div class="gallery-image">
-                            <img src="{{ url('assets/images/gallery/gallery1.jpg')}}" alt="image">
+        <div class="section-title">
+            <h2>Latest <span>Packages</span></h2>
+        </div>
+        <div class="list-content">
+            <div class="row">
+                @foreach($packagesData as $item)
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="room-item">
+                        <div class="room-image">
+                            <img style="max-height: 200px;" src="{{url('/uploads/packages').'/'.$item['main_image']}}" alt="{{ $item['name'] }}">
                         </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{{ url('assets/images/gallery/gallery1.jpg')}}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="brick">
-                    <div class="gallery-item">
-                        <div class="gallery-image">
-                            <img src="{{ url('assets/images/gallery/gallery16.jpg')}}" alt="image">
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{{ url('assets/images/gallery/gallery16.jpg')}}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="brick">
-                    <div class="gallery-item">
-                        <div class="gallery-image">
-                            <img src="{{ url('assets/images/gallery/gallery3.jpg')}}" alt="image">
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{{ url('assets/images/gallery/gallery3.jpg')}}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="brick">
-                    <div class="gallery-item">
-                        <div class="gallery-image">
-                            <img src="{{ url('assets/images/gallery/gallery17.jpg')}}" alt="image">
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{{ url('assets/images/gallery/gallery17.jpg')}}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                            </ul>
+                        <div class="room-content">
+                            <div class="room-title">
+                                <p><i class="fa fa-inr"></i> Rs.{{ $item['price'] }}</p>
+                                <div class="deal-rating">
+                                    <?php
+                                    for ($i = 1; $i <= $item['star_rating']; $i++) {
+                                    ?>
+                                        <span class="fa fa-star checked"></span>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                                <h5 style="min-height: 60px;max-height: 60px;">
+                                    <a href="{{ url('packages') }}/{{ $item['id'] }}/{{ Str::slug($item['name'],'_') }}">
+                                        {{ substr($item['name'], 0, 50)}}
+                                    </a>
+                                </h5>
+                            </div>
+                            <div class="room-services mar-bottom-15">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <i class="fa fa-clock" aria-hidden="true"></i> {{ $item['duration_day'] }} - {{ $item['duration_night'] }}
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $item->Destination['name'] }}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p> -->
+                            <div class="room-btns">
+                                <!-- <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a> -->
+                                <center> <a href="{{ url('packages') }}/{{ $item['id'] }}/{{ Str::slug($item['name'],'_') }}" class="btn btn-orange">VIEW DETAILS</a></center>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="brick">
-                    <div class="gallery-item">
-                        <div class="gallery-image">
-                            <img src="{{ url('assets/images/gallery/gallery15.jpg')}}" alt="image">
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{{ url('assets/images/gallery/gallery15.jpg')}}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="brick">
-                    <div class="gallery-item">
-                        <div class="gallery-image">
-                            <img src="{{ url('assets/images/gallery/gallery5.jpg')}}" alt="image">
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{{ url('assets/images/gallery/gallery5.jpg')}}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                @endforeach
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <center>
+                        <a href="<?php echo route('front.packages') ?>" class="btn btn-orange mar-right-10">EXPLORE ALL Packages</a>
+                    </center>
                 </div>
             </div>
         </div>
 
     </div>
 </section>
-<!-- Gallery Ends -->
+<!-- room list Ends -->
+
+
 
 <!-- Reviews Starts -->
 <section class="reviews reviews-style-1">
@@ -523,80 +334,6 @@ Home
 </section>
 <!-- Reviews Ends -->
 
-<!-- News Starts -->
-<section class="news">
-    <div class="container">
-        <div class="section-title">
-            <h2>Latest <span>News</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
-        </div>
-        <div class="news-outer">
-            <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="news-item">
-                        <div class="news-image">
-                            <img src="{{ url('assets/images/news1.jpg')}}" alt="image">
-                        </div>
-                        <div class="news-content">
-                            <p class="date mar-bottom-5">16 DECEMBER 2019</p>
-                            <h4><a href="single-right.html">Why choose Hotux Hotel to travel this summer</a></h4>
-                            <div class="room-services mar-bottom-10">
-                                <ul>
-                                    <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</a></li>
-                                    <li><a href="single-right.html"><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</a></li>
-                                </ul>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                            <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="news-item">
-                        <div class="news-image">
-                            <img src="{{ url('assets/images/news2.jpg')}}" alt="image">
-                        </div>
-                        <div class="news-content">
-                            <p class="date mar-bottom-5">16 DECEMBER 2019</p>
-                            <h4><a href="single-right.html">Why choose Hotux Hotel to travel this summer</a></h4>
-                            <div class="room-services mar-bottom-10">
-                                <ul>
-                                    <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</a></li>
-                                    <li><a href="single-right.html"><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</a></li>
-                                </ul>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                            <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="news-item">
-                        <div class="news-image">
-                            <img src="{{ url('assets/images/news3.jpg')}}" alt="image">
-                        </div>
-                        <div class="news-content">
-                            <p class="date mar-bottom-5">16 DECEMBER 2019</p>
-                            <h4><a href="single-right.html">Why choose Hotux Hotel to travel this summer</a></h4>
-                            <div class="room-services mar-bottom-10">
-                                <ul>
-                                    <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</a></li>
-                                    <li><a href="single-right.html"><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</a></li>
-                                </ul>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                            <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section-btn">
-            <a href="#" class="btn btn-black mar-right-10">EXPLORE ALL <i class="fas fa-angle-double-right"></i></a>
-        </div>
-    </div>
-</section>
-<!-- News Ends -->
 
 @endsection
 @section('javascript_code')

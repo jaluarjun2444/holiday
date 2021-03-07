@@ -51,7 +51,23 @@
             border-color: #ddd;
             margin-right: 10px;
         }
+
+        footer li p {
+            line-height: 5px;
+            /* margin-left: 60px; */
+        }
+
+        footer li {
+            line-height: 25px;
+            /* margin-left: 60px; */
+        }
     </style>
+    <style>
+        <?php echo  $menuData['settingData']['custom_style'] ?? '' ?>
+    </style>
+    <script>
+        <?php echo  $menuData['settingData']['custom_script'] ?? '' ?>
+    </script>
 </head>
 
 <body>
@@ -66,19 +82,22 @@
     <header class="main_header_area headerstyle-2">
         <div class="header-content">
             <div class="container">
-                <div class="links links-left">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@hotux.com.np</a></li>
-                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 977-222-333-444</a></li>
-                        <!-- <li>
+                <!-- <div class="links links-left"> -->
+                <!-- <ul> -->
+                <!-- <li> -->
+                <marquee style="color: white;"><?php echo $menuData['settingData']['top_msg'] ?? '' ?></marquee>
+                <!-- </li> -->
+                <!-- <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo  $menuData['settingData']['email'] ?? '' ?></a></li>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo  $menuData['settingData']['mobile'] ?? '' ?></a></li> -->
+                <!-- <li>
                             <select>
                                 <option>Eng</option>
                                 <option>Fra</option>
                                 <option>Esp</option>
                             </select>
                         </li> -->
-                    </ul>
-                </div>
+                <!-- </ul> -->
+                <!-- </div> -->
                 <!-- <div class="links links-right pull-right">
                     <ul>
                         <li><a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
@@ -102,7 +121,13 @@
 
                     <div class="navbar-header">
                         <a class="navbar-brand" href="{{ route('front.index') }}">
-                            <img alt="Image" src="{{ url('assets/images/logo-black.png')}}" class="logo-black">
+                            <img alt="Image" style="width: 120px;" src="<?php
+                                                                        if ($menuData["settingData"]["logo"] != "") {
+                                                                            echo url('/uploads/logo') . '/' . $menuData["settingData"]["logo"];
+                                                                        } else {
+                                                                            echo url('/uploads/logo') . '/default.png';
+                                                                        }
+                                                                        ?>" class="logo-black">
                         </a>
                     </div>
 
@@ -139,13 +164,19 @@
                             @endif
                         </ul>
                         </li>
-                        <li><a href="{{ route('front.index') }}">About Us</a></li>
-                        <li><a href="{{ route('front.index') }}">Contact Us</a></li>
+                        <li><a href="{{ route('front.about_us') }}">About Us</a></li>
+                        <li><a href="{{ route('front.contact_us') }}">Contact Us</a></li>
                         <li><a href="{{ route('front.index') }}">Career</a></li>
-                        <li><a href="{{ route('front.index') }}">Pay Us</a></li>
+                        <?php if ($menuData['settingData']['link_1_name'] != "") { ?>
+                            <li><a href="<?php echo  $menuData['settingData']['link_1_url'] ?? '' ?>"><?php echo  $menuData['settingData']['link_1_name'] ?? '' ?></a></li>
+                        <?php } ?>
+                        <?php if ($menuData['settingData']['link_2_name'] != "") { ?>
+                            <li><a href="<?php echo  $menuData['settingData']['link_2_url'] ?? '' ?>"><?php echo  $menuData['settingData']['link_2_name'] ?? '' ?></a></li>
+                        <?php } ?>
+                        <li><a href="<?php echo  $menuData['settingData']['pay_us_link'] ?? '' ?>">Pay Us</a></li>
                         </ul>
                         <div class="nav-btn">
-                            <a href="#" class="btn btn-orange">Book Now</a>
+                            <a href="{{ route('front.contact_us') }}" class="btn btn-orange">Book Now</a>
                         </div>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -161,7 +192,7 @@
     @yield('javascript_code')
 
     <!-- Footer Starts -->
-    <footer class="footer-style-1">
+    <footer style="    padding-top: 0px;" class="footer-style-1">
 
         <div class="footer-top">
             <div class="container">
@@ -210,10 +241,15 @@
                             <div class="footer-contact">
                                 <h4>Contact info</h4>
                                 <ul>
-                                    <li>Tel: 977-222-444-6666</li>
-                                    <li>Email: info@hotux.com.np</li>
-                                    <li>Fax: 977-222-444-666</li>
-                                    <li>Address: 445 Mount Eden Road, Sundarbasti, Chakrapath</li>
+                                    <li>Mobile : <?php echo  $menuData['settingData']['mobile'] ?? '' ?>
+                                    </li>
+                                    <?php if ($menuData['settingData']['mobile_2'] != "") { ?>
+                                        <li style="margin-left: 55px;">
+                                            <?php echo  $menuData['settingData']['mobile_2'] ?? '' ?>
+                                        </li>
+                                    <?php } ?>
+                                    <li>Email : <?php echo  $menuData['settingData']['email'] ?? '' ?></li>
+                                    <li><br><?php echo  $menuData['settingData']['address'] ?? '' ?></li>
                                 </ul>
                             </div>
                         </div>
@@ -224,13 +260,13 @@
         <div class="footer-copyright">
             <div class="container">
                 <div class="copyright-content text-center">
-                    <p class="white">Copyright {{ date('Y') }}</p>
-                    <ul>
+                    <p class="white">Copyright {{ date('Y') }} || <?php echo  $menuData['settingData']['name'] ?? '' ?></p>
+                    <!-- <ul>
                         <li><a href="#" class="white"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="white"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="white"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="white"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
